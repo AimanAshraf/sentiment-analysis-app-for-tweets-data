@@ -11,10 +11,9 @@ st.sidebar.title("Sentiment Analysis App")
 st.markdown("This app performs sentiment analysis on text data from tweets 🐦.")
 st.sidebar.markdown("This app performs sentiment analysis on text data from tweets 🐦.")
 
-url = "C:\\Users\\USER\\Desktop\\sentiment_app\\Tweets.csv"
 @st.cache_data(persist=True)
 def load_data():
-    data=pd.read_csv(url)
+    data=pd.read_csv("Tweets.csv")
     data['tweet_created']=pd.to_datetime(data['tweet_created'])
     return data
 
